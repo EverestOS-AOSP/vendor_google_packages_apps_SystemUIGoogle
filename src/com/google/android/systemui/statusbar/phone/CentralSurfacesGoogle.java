@@ -268,13 +268,13 @@ public class CentralSurfacesGoogle extends CentralSurfacesImpl {
             AlternateBouncerInteractor alternateBouncerInteractor,
             UserTracker userTracker,
             Provider<FingerprintManager> fingerprintManager,
+            TunerService tunerService,
             ActivityStarter activityStarter,
             BrightnessMirrorShowingInteractor brightnessMirrorShowingInteractor,
             GlanceableHubContainerController glanceableHubContainerController,
             EmergencyGestureIntentFactory emergencyGestureIntentFactory,
             ViewCaptureAwareWindowManager viewCaptureAwareWindowManager,
             BurnInProtectionController burnInProtectionController,
-            TunerService tunerService,
             Optional<ReverseChargingViewController> reverseChargingViewControllerOptional,
             WallpaperNotifier wallpaperNotifier,
             SmartSpaceController smartSpaceController,
@@ -379,13 +379,13 @@ public class CentralSurfacesGoogle extends CentralSurfacesImpl {
                 alternateBouncerInteractor,
                 userTracker,
                 fingerprintManager,
+                tunerService,
                 activityStarter,
                 brightnessMirrorShowingInteractor,
                 glanceableHubContainerController,
                 emergencyGestureIntentFactory,
                 viewCaptureAwareWindowManager,
-                burnInProtectionController,
-                tunerService);
+                burnInProtectionController);
         mContext = context;
         mBatteryStateChangeCallback =
                 new BatteryController.BatteryStateChangeCallback() {

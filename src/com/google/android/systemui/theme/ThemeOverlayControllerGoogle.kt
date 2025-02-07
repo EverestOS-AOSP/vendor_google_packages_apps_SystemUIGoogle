@@ -43,6 +43,7 @@ import com.android.systemui.theme.ThemeOverlayApplier
 import com.android.systemui.theme.ThemeOverlayController
 import com.android.systemui.util.kotlin.JavaAdapter
 import com.android.systemui.util.settings.SecureSettings
+import com.android.systemui.util.settings.SystemSettings
 import java.util.concurrent.Executor
 import javax.inject.Inject
 
@@ -57,6 +58,7 @@ constructor(
     @Background bgExecutor: Executor,
     themeOverlayApplier: ThemeOverlayApplier,
     secureSettings: SecureSettings,
+    systemSettings: SystemSettings,
     wallpaperManager: WallpaperManager,
     userManager: UserManager,
     deviceProvisionedController: DeviceProvisionedController,
@@ -80,6 +82,7 @@ constructor(
         bgExecutor,
         themeOverlayApplier,
         secureSettings,
+        systemSettings,
         wallpaperManager,
         userManager,
         deviceProvisionedController,
@@ -92,6 +95,7 @@ constructor(
         keyguardTransitionInteractor,
         uiModeManager,
         activityManager,
+        configurationController,
     ) {
     init {
         configurationController.addCallback(
